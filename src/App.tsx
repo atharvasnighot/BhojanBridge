@@ -1,16 +1,12 @@
-import BelowCarousal from "./components/BelowCarousal"
-import Carousal from "./components/Carousal"
-import Header from "./components/Header"
-import Map from "./components/Map"
+import Page1 from "./page/Page1";
+import { Routes, Route } from "react-router";
 
-function App() {
-
+const App = () => {
   return (
     <>
-      <Header />
-      <Carousal />
-      <BelowCarousal />
-      <Map />
+      <Routes>
+        <Route path="/" element={<Page1 />} />
+      </Routes>
     </>
   )
 }
