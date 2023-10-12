@@ -32,8 +32,6 @@ public class Users implements UserDetails {
     private String category;
     private String subCategory;
     private String address;
-    private String lattitude;
-    private String longitude;
     private double averageRating =0;
     private int badge = 0;
 
