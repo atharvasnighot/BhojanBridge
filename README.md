@@ -9,11 +9,11 @@
 ## Features
 Our Surplus Food Sharing Platform will include the following key features:
 
-**User Roles**: Different roles for restaurants, grocery stores, and consumers.
-**Food Listings**: Businesses can list surplus food, including details like quantity, expiration dates, and quality.
-**Real-time Updates**: Users can view and claim available surplus food in real-time.
-**Inventory Management**: Food providers can track their surplus food inventory.
-**Quality Assurance**: Standards to ensure the quality and safety of shared food.
-**Location Services**: Geolocation features to find nearby surplus food providers.
-**User Feedback**: A system for ratings and feedback to maintain quality.
+**User Roles**: Different roles for restaurants, grocery stores, and consumers.<br>
+**Food Listings**: Businesses can list surplus food, including details like quantity, expiration dates, and quality.<br>
+**Real-time Updates**: Users can view and claim available surplus food in real-time.<br>
+**Inventory Management**: Food providers can track their surplus food inventory.<br>
+**Quality Assurance**: Standards to ensure the quality and safety of shared food.<br>
+**Location Services**: Geolocation features to find nearby surplus food providers.<br>
+**User Feedback**: A system for ratings and feedback to maintain quality.<br>
 **Analytics**: Data collection for measuring the impact on food waste reduction and sustainability.
