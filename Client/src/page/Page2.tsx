@@ -6,6 +6,8 @@ export default () => {
   const [nameOfRestro, setNameOfRestro] = useState('')
   const [locationFromUser, setLocationFromUser] = useState('')
   const [feedCapacity, setFeedCapacity] = useState<number>(0)
+  const [time, setTime] = useState(null)
+  const [foodDescription, setFoodDescription] = useState(null)
 
   useEffect(() => {
     window.navigator.geolocation.getCurrentPosition(function(position) {
@@ -27,7 +29,9 @@ export default () => {
       name: nameOfRestro,
       imgUrl: '',
       location: locationFromUser,
-      capacity: feedCapacity
+      capacity: feedCapacity,
+      time: time,
+      foodDescription: foodDescription
     }
     setNameOfRestro('')
     setLocationFromUser('')
@@ -78,6 +82,32 @@ export default () => {
                 value={feedCapacity}
                 placeholder="Enter your Feeding Capacity"
                 onChange={e => setFeedCapacity(e.target.value)}
+              />
+            </div>
+            <div className="mb-6">
+              <label className="block text-gray-700 text-sm font-bold mb-2 font-mono">
+                Food Description
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="capacity"
+                type="text"
+                value={foodDescription}
+                placeholder="Enter your Feeding Capacity"
+                onChange={e => foodDescription(e.target.value)}
+              />
+            </div>
+            <div className="mb-6">
+              <label className="block text-gray-700 text-sm font-bold mb-2 font-mono">
+                Time Of Making 
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="capacity"
+                type="time"
+                value={feedCapacity}
+                placeholder="Enter your Feeding Capacity"
+                onChange={e => setTime(e.target.value)}
               />
             </div>
             <div className="mb-6">

@@ -6,6 +6,8 @@ import com.Tensor.BhojanBridge.services.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/provider")
 public class ProviderController {
@@ -28,6 +30,17 @@ public class ProviderController {
         System.out.println("Creating Provider Post on the Platform");
         providerService.getAllProviderPosts();
         return "Creating Provider Post on the Platform";
+    }
+
+    @GetMapping("/above/{feedCapacity}")
+    public List<ProviderPost> getAllPostsAbove(@PathVariable int feedCapacity){
+        return providerService.getPostsAbove(feedCapacity);
+    }
+
+    @PostMapping("/reduce/{postId}/{feeds}")
+    public String reduceFeedCapacity(@PathVariable Integer postId, @PathVariable int feeds){
+        System.out.println(postId + " "+ feeds);
+        return providerService.reduceFeedCapacity(postId, feeds);
     }
 
 }

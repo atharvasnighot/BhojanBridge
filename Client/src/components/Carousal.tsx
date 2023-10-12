@@ -13,6 +13,13 @@ export default () => {
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOJAViWqqlXKwRJHPp0LxE0FkK21JTiTOEr3PpiLEfYDSc32Rn_jYJAOeNP6Xlvd3kJZM'
   ];
 
+  const pagination = {
+    clickable: true,
+    renderBullet: function(index, className) {
+      return '';
+    },
+  };
+
   const cssStyles = `
   .swiper {
     width: 100%;
@@ -108,9 +115,9 @@ export default () => {
               modifier: 1,
               slideShadows: true,
             }}
-            pagination={true}
+            pagination={pagination}
             initialSlide={3}
-            modules={[EffectCoverflow, Pagination]}
+            modules={[Pagination]}
             className="mySwiper"
             id='event'
           >
@@ -119,7 +126,6 @@ export default () => {
                 <div className="slide-content">
                   <a href="/">
                     <img src={url} className="rounded-xl" alt={`Slide ${index + 1}`} />
-                    
                   </a>
                 </div>
               </SwiperSlide>
