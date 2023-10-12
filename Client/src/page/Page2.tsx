@@ -6,7 +6,6 @@ export default () => {
   const [nameOfRestro, setNameOfRestro] = useState('')
   const [locationFromUser, setLocationFromUser] = useState('')
   const [feedCapacity, setFeedCapacity] = useState<number>(0)
-  const [selectedImage, setSelectedImage] = useState(null)
 
   useEffect(() => {
     window.navigator.geolocation.getCurrentPosition(function(position) {
