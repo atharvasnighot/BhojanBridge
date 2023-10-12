@@ -1,5 +1,6 @@
 package com.Tensor.BhojanBridge.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -18,15 +19,23 @@ import java.util.Collection;
 @Table(name = "user_table")
 public class Users implements UserDetails {
 
+
     @Id
     private String userId;
+
+    @Column(unique=true)
+    private String organisationName;
 
     private String username;
     private String email;
     private String password;
-    private int age;
-    private String about;
-
+    private String category;
+    private String subCategory;
+    private String address;
+    private String lattitude;
+    private String longitude;
+    private double averageRating =0;
+    private int badge = 0;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
