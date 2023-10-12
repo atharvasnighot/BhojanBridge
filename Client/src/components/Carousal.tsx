@@ -109,17 +109,17 @@ export default () => {
               slideShadows: true,
             }}
             pagination={true}
-            initialSlide={3}
+            initialSlide={2}
             modules={[EffectCoverflow, Pagination]}
             className="mySwiper"
             id='event'
+            autoplay
           >
             {imageUrls.map((url, index) => (
               <SwiperSlide key={index}>
                 <div className="slide-content">
                   <a href="/">
                     <img src={url} className="rounded-xl" alt={`Slide ${index + 1}`} />
-
                   </a>
                 </div>
               </SwiperSlide>
