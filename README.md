@@ -20,7 +20,8 @@ Our Surplus Food Sharing Platform will include the following key features:
 **Analytics**: Data collection for measuring the impact on food waste reduction and sustainability.<br>
 
 ## WorkFlow
-![Alt text](https://drive.google.com/file/d/1-jetVj-_TDbzDfceFnQEhW8bmejr8SSz/view?usp=drive_link)
+
+![FoodBridge](https://github.com/atharvasnighot/Tensor/assets/88282319/2f6a241c-2c62-4dd8-b764-047610693e70)
 
 ## React + TypeScript + Vite
 
