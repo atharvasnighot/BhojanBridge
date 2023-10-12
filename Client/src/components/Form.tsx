@@ -3,11 +3,11 @@ export default () => {
     <>
       <nav className="p-4 bg-blue-500 items-center">
         <div className="container mx-auto items-center">
-
-          <div className="max-w-md mx-auto mt-8">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <div className="max-w-lg mx-auto mt-8">
+            <form className="bg-white shadow-md rounded-lg p-8 mb-4 h-120 w-96">
+              {/* Increased border radius for a larger box */}
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" >
+                <label className="block text-gray-700 text-sm font-bold mb-2">
                   Username
                 </label>
                 <input
@@ -29,7 +29,7 @@ export default () => {
                 />
               </div>
               <div className="mb-6">
-                <label className="block text-gray-700 text-sm font-bold mb-2" >
+                <label className="block text-gray-700 text-sm font-bold mb-2">
                   Password
                 </label>
                 <input
@@ -40,9 +40,10 @@ export default () => {
                 />
               </div>
               <div className="flex items-center justify-between">
+                {/* Added transition and transform classes for button animation */}
                 <button
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="submit"
+                    className="bg-blue-500 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transform transition-transform duration-300 ease-in-out hover:border-blue-700 hover:border-b-4"
+                    type="submit"
                 >
                   Sign Up
                 </button>
@@ -51,7 +52,6 @@ export default () => {
           </div>
         </div>
       </nav>
-
     </>
-  )
-}
+  );
+};

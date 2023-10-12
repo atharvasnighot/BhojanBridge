@@ -16,7 +16,7 @@ export default () => {
                 <li><a href="/" className="text-white flex items-center"><AiFillInfoCircle /> About</a></li>
                 <li><a href="/" className="text-white flex items-center"><AiFillContacts /> Contact</a></li>
                 <Link to='/3'>
-                <li><button className="text-zinc-900 bg-white p-2 rounded-md">login</button></li>
+                <li><button className="text-zinc-1800 bg-white p-2 rounded-md">Login</button></li>
                 </Link>
               </ul>
             </div>
