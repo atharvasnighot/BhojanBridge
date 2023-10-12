@@ -93,7 +93,7 @@ export default () => {
   return (
     <>
       <div className="container mx-auto p-6">
-        <h1 className="text-4xl text-black font-mono"> Food currently available </h1>
+        <h1 className="text-4xl text-black font-sans"> Food currently available </h1>
         <div id="events">
           <style>{cssStyles}</style>
           <Swiper
@@ -109,17 +109,17 @@ export default () => {
               slideShadows: true,
             }}
             pagination={true}
-            initialSlide={2}
+            initialSlide={3}
             modules={[EffectCoverflow, Pagination]}
             className="mySwiper"
             id='event'
-            autoplay
           >
             {imageUrls.map((url, index) => (
               <SwiperSlide key={index}>
                 <div className="slide-content">
                   <a href="/">
                     <img src={url} className="rounded-xl" alt={`Slide ${index + 1}`} />
+                    
                   </a>
                 </div>
               </SwiperSlide>
