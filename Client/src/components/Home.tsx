@@ -4,11 +4,12 @@ import {
 import BelowCarousal from "../components/BelowCarousal";
 import Carousal from "../components/Carousal";
 import Map from "../components/Map";
+import Header from "./Header";
 
 export default () => {
     return (
         <>
-
+            <Header />
             <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
                 <div className="absolute top-0 h-full w-full bg-[url('https://img.freepik.com/free-photo/top-view-yellow-rice-pita-arrangement_23-2148728164.jpg?w=1380&t=st=1697160604~exp=1697161204~hmac=1d193e6f9d200d8f3814efe593575f8ea7836883442f280953271cbbc59efa05')] bg-cover bg-center" />
                 <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
@@ -18,10 +19,10 @@ export default () => {
                             <Typography
                                 variant="h1"
                                 color="white"
-                                className="mb-15 font-black"
-                            >
+                                className="mb-15 font-black text-4xl">
                                 Your Journey of Starving Ends with us.
                             </Typography>
+                            <br></br>
                             <Typography variant="lead" color="white" className="opacity-80">
                                 Embark on a journey where hunger and food wastage meet their end.
                                 Our app empowers you to make a difference, one meal at a time.
@@ -34,8 +35,8 @@ export default () => {
             <div
                 className="relative"
                 style={{
-                    backgroundImage: `url('https://img.freepik.com/free-photo/indian-food-with-copy-space-high-angle_23-2148747687.jpg?w=360&t=st=1697162843~exp=1697163443~hmac=a649af113ff6c0b045d83be42492f4a2abf3cc054fa975f0b4a7288a2471274b')`,
-                    backgroundSize: "fit",
+                    backgroundImage: `url('https://img.freepik.com/free-photo/abstract-surface-textures-white-concrete-stone-wall_74190-8189.jpg?w=1060&t=st=1697165445~exp=1697166045~hmac=19a24a93d1101bba3f16d9b92389dfb6c3e0878ede29fe297103cdc3b10260ce')`,
+                    backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
             >
