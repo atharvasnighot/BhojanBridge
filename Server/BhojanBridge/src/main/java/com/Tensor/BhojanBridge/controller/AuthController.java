@@ -73,6 +73,18 @@ public class AuthController {
 
     @PostMapping("/register")
     public Users createUser(@RequestBody Users user){
+        System.out.println("Registering New User");
         return userServices.createUser(user);
+    }
+
+    @GetMapping("/isProvider/{username}")
+    public boolean isProvider(@PathVariable String username){
+        Users user = userRepo.findByEmail(username).get();
+        String prov = "Provider";
+        if(prov.equals(user.getCategory())){
+            return true;
+        }
+        else
+            return false;
     }
 }

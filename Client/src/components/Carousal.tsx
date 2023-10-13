@@ -144,7 +144,7 @@ export default () => {
             {imageUrls.map((el, index) => (
               <SwiperSlide key={index}>
                 <div className="slide-content">
-                  <a href="/">
+                  <a href="/5">
                     <img src={el} className="rounded-xl" alt={`Slide ${index + 1}`} />
                   
                   </a>

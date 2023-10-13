@@ -29,7 +29,6 @@ public class ProviderController {
     public List<ProviderPost> getAllProviderPosts(){
         System.out.println("All Posts");
         return providerService.getAllProviderPosts();
-
     }
 
     @GetMapping("/above/{feedCapacity}")
@@ -42,5 +41,7 @@ public class ProviderController {
         System.out.println(postId + " "+ feeds);
         return providerService.reduceFeedCapacity(postId, feeds);
     }
+
+
 
 }
