@@ -19,9 +19,10 @@ export default () => {
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-300">
-        <div className="bg-white p-8 rounded shadow-md h-96 w-96">
+        <div className="bg-white p-8 rounded shadow-md h-108 w-96">
           {/* Increased height and width */}
-          <h2 className="text-2xl font-semibold mb-4 flex items-center justify-center">Login</h2>
+          <img src={'BridgeBhojan.png'} alt="Sign Up" className="mx-auto mb-4 w-24 h-24"/>
+          <h2 className="text-4xl font-semibold mb-4 flex items-center justify-center">Login</h2>
           <form onSubmit={handleLogin} className="rounded-xl">
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
