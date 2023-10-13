@@ -1,15 +1,16 @@
-import BelowCarousal from "../components/BelowCarousal"
-import Carousal from "../components/Carousal"
-import Header from "../components/Header"
-import Map from "../components/Map"
+import Home from "../components/Home"
 
 export default () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Header />
       <Carousal />
       <Map />
+=======
+      <Home />
+>>>>>>> origin/main
     </>
   )
 }

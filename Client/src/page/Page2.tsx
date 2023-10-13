@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import axios from "axios";
+=======
+>>>>>>> origin/main
 import { SyntheticEvent, useEffect, useState } from "react";
 
 export default () => {
@@ -53,9 +56,12 @@ export default () => {
     setIsVeg(false);
     setFoodCategory("");
     console.log(newObj);
+<<<<<<< HEAD
 
     axios.post('http://localhost:8080/provider/create-post',newObj)
     
+=======
+>>>>>>> origin/main
   };
 
   return (
@@ -132,6 +138,7 @@ export default () => {
               />
             </div>
             <div className="mb-6">
+<<<<<<< HEAD
               
 
 <div className="mb-6">
@@ -143,6 +150,31 @@ export default () => {
               </label>
               <input
                 className="input-field"
+=======
+              <label
+                className="block text-gray-800 text-lg font-bold mb-2"
+                htmlFor="time"
+              >
+                Time Of Making
+              </label>
+              <input
+                className="input-field"
+                id="time"
+                type="time"
+                value={time}
+                onChange={(e) => setTime(e.target.value)}
+              />
+
+<div className="mb-6">
+              <label
+                className="block text-gray-800 text-lg font-bold mb-2"
+                htmlFor="dateOfPicking"
+              >
+                Date of Picking
+              </label>
+              <input
+                className="input-field"
+>>>>>>> origin/main
                 id="dateOfPicking"
                 type="date"
                 value={dateOfPicking}
@@ -234,4 +266,8 @@ export default () => {
       </div>
     </>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/main
