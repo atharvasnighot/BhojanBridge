@@ -26,10 +26,10 @@ public class ProviderController {
     }
 
     @GetMapping("/all-current")
-    public String getAllProviderPosts(){
-        System.out.println("Creating Provider Post on the Platform");
-        providerService.getAllProviderPosts();
-        return "Creating Provider Post on the Platform";
+    public List<ProviderPost> getAllProviderPosts(){
+        System.out.println("All Posts");
+        return providerService.getAllProviderPosts();
+
     }
 
     @GetMapping("/above/{feedCapacity}")

@@ -3,15 +3,24 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import axios from 'axios'
+import { useEffect, useState } from 'react';
 
 export default () => {
+  const [array, setArray] = useState([])
+  const [feedCount, setFeedCount] = useState(0); // Initialize feed count
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0); // Initialize current slide index
 
+  useEffect(() => {
+    axios.get('http://localhost:8080/provider/all-current').then(res => setArray(res.data))
+  } ,[])
+  
   const imageUrls = [
-    'https://scontent.fnag10-1.fna.fbcdn.net/v/t39.30808-6/241417591_516888582684384_5224211915914241200_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=52f669&_nc_ohc=UPiPobF6_gAAX_v1aPs&_nc_ht=scontent.fnag10-1.fna&oh=00_AfD9gGZeOavCQXBv74DzB3VxnsHAEARBXu8W-LXU4lkvZQ&oe=652BE37A',
-    'https://penji.co/wp-content/uploads/2020/10/Dave-CHUYAX.jpg',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5BSoqDaRti61qrt65opWckM6Q0eubQj6Hwg',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOJAViWqqlXKwRJHPp0LxE0FkK21JTiTOEr3PpiLEfYDSc32Rn_jYJAOeNP6Xlvd3kJZM'
-  ];
+    'https://b.zmtcdn.com/data/pictures/1/3301331/b63ef523c6c5a95a0d20a70e616dbd32.jpg',
+    'https://etvbharatimages.akamaized.net/etvbharat/prod-images/01-07-2023/1200-675-18887791-thumbnail-16x9-biryani-aspera.jpg',
+    'https://allchickenrecipe.com/wp-content/uploads/2020/05/Chicken-Momos.jpg',
+    'https://c.ndtvimg.com/2023-03/0m65kep_samosa_625x300_10_March_23.jpg'
+  ];
 
   const pagination = {
     clickable: true,
@@ -97,6 +106,16 @@ export default () => {
   }
   
  `;
+
+ const handleSlideChange = (swiper) => {
+  // Get the active slide index and update feed count based on your logic
+  const activeSlideIndex = swiper.activeIndex;
+  // For example, you can set the feed count based on the active slide index
+  
+  setFeedCount(Math.floor(Math.random() * 100) + 1);
+  setCurrentSlideIndex(activeSlideIndex);
+};
+
   return (
     <>
       <div className="container mx-auto p-6">
@@ -119,19 +138,24 @@ export default () => {
             initialSlide={3}
             modules={[Pagination]}
             className="mySwiper"
+            onSlideChange={handleSlideChange}
             id='event'
           >
-            {imageUrls.map((url, index) => (
+            {imageUrls.map((el, index) => (
               <SwiperSlide key={index}>
                 <div className="slide-content">
                   <a href="/">
-                    <img src={url} className="rounded-xl" alt={`Slide ${index + 1}`} />
+                    <img src={el} className="rounded-xl" alt={`Slide ${index + 1}`} />
+                  
                   </a>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
+      </div>
+      <div className="container mx-auto flex justify-center p-6">
+        <h1 className="text-2xl text-black font-mono font-bold">Estimated feed Count: {feedCount} people</h1>
       </div>
     </>
   )

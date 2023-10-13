@@ -9,7 +9,6 @@ export default () => {
     <>
       <Header />
       <Carousal />
-      <BelowCarousal />
       <Map />
     </>
   )

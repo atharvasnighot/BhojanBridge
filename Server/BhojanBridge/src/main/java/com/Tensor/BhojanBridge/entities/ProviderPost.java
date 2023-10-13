@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Date;
+import java.sql.Time;
 
 @Getter
 @Setter
@@ -19,12 +20,15 @@ public class ProviderPost {
     private Integer id;
 
     private String organisationName;
-    private Date timeOfMaking;
+    private Time timeOfMaking;
+    private Date dateOfMaking;
     private int feedCapacity = 0;
     private String imageUrl;
     private double latitude;
     private double longitude;
+    private String locality;
     private String foodDescription;
+    private String foodCategory;
     private boolean nonVeg = false;
 
 

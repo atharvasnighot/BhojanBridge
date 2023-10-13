@@ -78,6 +78,7 @@ export default () => {
               <select onChange={e => setCategory(e.target.value)}>
 
                 <option value='Provider'>Provider</option>
+                <option value='Provider'>Consumer</option>
               </select>
             </div>
             <div className="mb-6">
@@ -104,7 +105,7 @@ export default () => {
                 id="password"
                 type="text"
                 value={address}
-                placeholder="Enter your password"
+                placeholder="Enter your address"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
